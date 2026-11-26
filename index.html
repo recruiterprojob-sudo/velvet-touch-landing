@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Velvet touch — работа в SPA-салоне</title>
+  <meta name="description" content="Velvet touch — работа в SPA-салоне с обучением, официальным договором и жильём при трудоустройстве." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&family=Marck+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="logo-sprig" viewBox="0 0 32 32">
+      <path d="M8 28C12 20 17 12 26 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M13 19c-4 0-6-2-7-5 4 0 6 2 7 5Z M16 14c-1-4 0-7 3-9 1 4 0 7-3 9Z M18 13c3-2 6-2 9 0-3 2-6 2-9 0Z M11 23c-3 1-6 0-8-2 3-1 6 0 8 2Z M14 18c3-2 6-2 8 0-3 2-6 2-8 0Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-plane" viewBox="0 0 24 24"><path d="M21.5 3.5 2.8 10.7c-.9.4-.9 1.6 0 1.9l4.6 1.6 1.8 5.6c.2.8 1.2 1 1.8.4l2.6-2.5 4.7 3.5c.7.5 1.6.1 1.8-.7l3-15.4c.2-1-.7-1.9-1.6-1.6ZM9.6 14l8.2-6.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="i-clip" viewBox="0 0 24 24"><path d="m20 11.5-8.2 8.2a5 5 0 0 1-7.1-7.1l8.5-8.5a3.4 3.4 0 0 1 4.8 4.8l-8.5 8.5a1.7 1.7 0 0 1-2.4-2.4l7.8-7.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3-4.6-4.5 6.4-.9Z" fill="currentColor"/></symbol>
+  </svg>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="Velvet touch — на главную">
+        <svg class="logo__icon"><use href="#logo-sprig"/></svg>
+        <span class="logo__text">Velvet touch</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Основное меню">
+        <a href="#about">Описание вакансии</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+        <a href="#apply" class="btn btn--outline nav__cta">Стать частью команды</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title">Зарабатывай больше,<br />оставаясь в комфортных условиях</h1>
+        <p class="hero__subtitle">Спокойная работа в SPA-салоне с поддержкой, обучением и понятными условиями</p>
+        <a href="#apply" class="btn btn--filled">Хочу работать</a>
+        <div class="hero__photos">
+          <figure class="photo photo--tall" style="--img:url('assets/img/hero-team.jpg')" data-label="Команда в униформе"></figure>
+          <figure class="photo photo--tall" style="--img:url('assets/img/hero-spa.jpg')" data-label="SPA-натюрморт: орхидеи, полотенца, масла"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="section benefits" id="about">
+      <svg class="palm" viewBox="0 0 400 400" aria-hidden="true">
+        <g fill="currentColor">
+          <path d="M40 390 C120 300 200 230 380 60 L384 66 C210 236 128 306 46 394Z"/>
+          <path d="M120 310c-40-10-70-40-90-80 45 10 75 40 90 80Z M160 272c-30-30-40-70-35-110 30 30 42 70 35 110Z M170 270c40-20 85-20 125 0-40 22-85 22-125 0Z M205 236c-26-34-30-74-18-112 26 34 32 74 18 112Z M215 232c40-14 82-10 118 12-42 16-82 12-118-12Z M250 200c-20-36-18-76 0-110 20 36 18 76 0 110Z M260 196c38-8 76 0 106 26-40 10-76 2-106-26Z M295 160c-14-32-10-66 8-92 14 32 10 66-8 92Z M305 156c30-2 58 8 78 30-32 4-58-6-78-30Z M85 345c-40 0-75-20-95-55 42 2 76 22 95 55Z"/>
+        </g>
+      </svg>
+      <div class="container">
+        <h2 class="h2"><span class="cap">П</span>очему у нас комфортно работать</h2>
+        <div class="benefits__grid">
+          <article class="card">
+            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M3 9 12 5l9 4-9 4-9-4Z M7 11v4c0 1.5 2.2 3 5 3s5-1.5 5-3v-4 M21 9v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
+            <h3 class="card__title">Обучение и поддержка</h3>
+            <p>Обучаем стандартам сервиса и техникам салона, помогаем подготовиться к лицензированию и поддерживаем на каждом этапе.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M12 3v18 M16.5 7.5c-.6-1.4-2.3-2.3-4.5-2.3-2.6 0-4.3 1.3-4.3 3.1 0 4.3 9 2.3 9 6.7 0 1.9-1.9 3.3-4.7 3.3-2.4 0-4.2-1-4.9-2.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <h3 class="card__title">Достойный доход</h3>
+            <p>Почасовая ставка, процент с услуг и чаевые. Все условия оплаты прописаны в договоре.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M3 11 12 4l9 7 M5 9.5V20h14V9.5 M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3 class="card__title">Комфортное проживание</h3>
+            <p>При трудоустройстве предоставляем уютное, полностью оборудованное жильё рядом с салоном.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3.5 10h17 M8 3v4 M16 3v4 M8 14h3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <h3 class="card__title">Гибкий график</h3>
+            <p>Вы сами выбираете удобный график и количество рабочих дней в неделю.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.5 3.2 8.2 7.5 9.5 4.3-1.3 7.5-5 7.5-9.5V6L12 3Z M8.8 12l2.2 2.2 4.4-4.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3 class="card__title">Уважение и безопасность</h3>
+            <p>Официальное оформление, чёткие правила и бережное отношение к каждому сотруднику.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="container container--narrow">
+        <h2 class="h2"><span class="cap">О</span>тветы на частые вопросы</h2>
+        <div class="accordion">
+          <div class="acc">
+            <button class="acc__head" aria-expanded="false">
+              <span>Сколько я могу заработать за одну смену?</span>
+              <span class="acc__btn" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+            </button>
+            <div class="acc__body"><p>Доход складывается из почасовой ставки, процента с услуг и чаевых. Точные цифры зависят от локации, графика и вашей квалификации — на собеседовании мы покажем расчёт и закрепим условия в договоре.</p></div>
+          </div>
+          <div class="acc">
+            <button class="acc__head" aria-expanded="false">
+              <span>Вы предоставляете жильё?</span>
+              <span class="acc__btn" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+            </button>
+            <div class="acc__body"><p>Да, при трудоустройстве мы предоставляем жильё рядом с салоном: чистые комнаты, кухня, зона отдыха. Условия проживания прописываются в договоре заранее, до начала работы.</p></div>
+          </div>
+          <div class="acc">
+            <button class="acc__head" aria-expanded="false">
+              <span>Где вы находитесь?</span>
+              <span class="acc__btn" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+            </button>
+            <div class="acc__body"><p>Наши салоны находятся в нескольких городах США. Мы подберём для вас ближайшую и удобную локацию и заранее сообщим точный адрес салона и жилья.</p></div>
+          </div>
+          <div class="acc">
+            <button class="acc__head" aria-expanded="false">
+              <span>У меня нет опыта работы в SPA. Смогу ли я?</span>
+              <span class="acc__btn" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+            </button>
+            <div class="acc__body"><p>Да. Начать можно с позиции администратора или ассистента, а мы проведём обучение и поможем подготовиться к получению лицензии массажиста. Сопровождаем на каждом этапе, чтобы вы чувствовали себя уверенно и спокойно.</p></div>
+          </div>
+        </div>
+        <div class="center"><a href="#apply" class="btn btn--filled">Хочу начать</a></div>
+      </div>
+    </section>
+
+    <!-- Проживание -->
+    <section class="section housing">
+      <div class="container">
+        <h2 class="h2"><span class="cap">К</span>омфортные условия для жизни и работы</h2>
+        <p class="lead">Мы предоставляем сотрудникам удобное и полностью оборудованное жильё с чистыми комнатами, уютными зонами для отдыха и безопасной атмосферой, чтобы вы могли спокойно жить и работать.</p>
+        <div class="gallery">
+          <figure class="photo g1" style="--img:url('assets/img/bedroom.jpg')" data-label="Спальня"></figure>
+          <figure class="photo g2" style="--img:url('assets/img/room-1.jpg')" data-label="Массажный кабинет"></figure>
+          <figure class="photo g3" style="--img:url('assets/img/room-2.jpg')" data-label="Кабинет"></figure>
+          <figure class="photo g4" style="--img:url('assets/img/room-decor.jpg')" data-label="Кабинет с декором"></figure>
+          <figure class="photo g5" style="--img:url('assets/img/bathroom.jpg')" data-label="Ванная"></figure>
+          <figure class="photo g6" style="--img:url('assets/img/kitchen.jpg')" data-label="Кухня"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <h2 class="h2"><span class="cap">О</span>пыт тех, кто уже с нами</h2>
+      </div>
+      <div class="slider" id="slider">
+        <div class="slider__track" id="track">
+          <article class="review">
+            <div class="review__head"><div class="avatar">В</div><div><div class="review__name">Вероника, 24 года</div><div class="stars" aria-label="5 из 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div></div></div>
+            <p>Сначала переживала, что не справлюсь, но обучение оказалось бесплатным и очень понятным. Все условия прописали в договоре, коллектив дружный. Очень довольна!</p>
+            <time class="review__date">07/01/2026</time>
+          </article>
+          <article class="review">
+            <div class="review__head"><div class="avatar">М</div><div><div class="review__name">Марина, 21 год</div><div class="stars" aria-label="5 из 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div></div></div>
+            <p>Пришла без опыта, начала администратором. Всё объяснили, показали и поддерживали на каждом шаге, сейчас готовлюсь к лицензии. Чувствую себя уверенно и спокойно!</p>
+            <time class="review__date">07/01/2026</time>
+          </article>
+          <article class="review">
+            <div class="review__head"><div class="avatar">К</div><div><div class="review__name">Катя, 37 лет</div><div class="stars" aria-label="5 из 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div></div></div>
+            <p>Я переживала насчёт сменного графика и переезда, но всё оказалось легко: ближайшая локация, жильё комфортное, а доход позволяет спокойно жить.</p>
+            <time class="review__date">07/01/2026</time>
+          </article>
+          <article class="review">
+            <div class="review__head"><div class="avatar">А</div><div><div class="review__name">Алина, 29 лет</div><div class="stars" aria-label="5 из 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div></div></div>
+            <p>Нравится, что график можно подстроить под себя. Руководство всегда на связи, вопросы решаются быстро и без нервов.</p>
+            <time class="review__date">07/01/2026</time>
+          </article>
+          <article class="review">
+            <div class="review__head"><div class="avatar">Д</div><div><div class="review__name">Дарья, 26 лет</div><div class="stars" aria-label="5 из 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div></div></div>
+            <p>Работаю второй год. Уютный салон, внимательные клиенты и понятная система оплаты — всё как обещали на собеседовании.</p>
+            <time class="review__date">07/01/2026</time>
+          </article>
+        </div>
+      </div>
+      <div class="slider__controls">
+        <button class="round-btn round-btn--prev" id="prev" aria-label="Предыдущий отзыв"><svg><use href="#i-arrow"/></svg></button>
+        <div class="dots" id="dots"></div>
+        <button class="round-btn" id="next" aria-label="Следующий отзыв"><svg><use href="#i-arrow"/></svg></button>
+      </div>
+    </section>
+
+    <!-- Форма -->
+    <section class="section apply" id="apply">
+      <div class="container apply__inner" id="contacts">
+        <div class="apply__info">
+          <h2 class="h2 h2--left"><span class="cap">С</span>делайте первый шаг</h2>
+          <p>Оставьте заявку, и мы подробно расскажем о работе, условиях и ответим на все ваши вопросы.</p>
+          <h3 class="h3">Задать вопрос в Telegram</h3>
+          <a href="https://t.me/velvettouch_demo" target="_blank" rel="noopener" class="btn btn--outline btn--icon"><svg><use href="#i-plane"/></svg>Telegram</a>
+        </div>
+        <form class="form" id="form" novalidate>
+          <div class="form__row">
+            <label class="field"><span>Имя*</span><input name="name" type="text" placeholder="Анна" required autocomplete="given-name" /></label>
+            <label class="field"><span>Возраст*</span><input name="age" type="number" min="18" max="65" placeholder="23" required /></label>
+          </div>
+          <div class="form__row">
+            <label class="field"><span>Ваш текущий город (США)</span><input name="city" type="text" placeholder="Лос-Анджелес" autocomplete="address-level2" /></label>
+            <label class="field"><span>Ваш номер телефона в Telegram</span><input name="phone" type="tel" placeholder="+1 XXX XXX XXXX" autocomplete="tel" /></label>
+          </div>
+          <label class="field"><span>Ник в Telegram*</span><input name="telegram" type="text" placeholder="@username" required pattern="@?[A-Za-z0-9_]{5,32}" /></label>
+          <label class="attach">
+            <input type="file" name="file" id="file" accept=".pdf,.doc,.docx,image/*" />
+            <span class="attach__btn"><svg><use href="#i-clip"/></svg></span>
+            <span class="attach__label" id="fileLabel">Прикрепить резюме или сертификат</span>
+          </label>
+          <p class="form__note">Необязательно. Все материалы используются строго конфиденциально и не передаются третьим лицам.</p>
+          <button type="submit" class="btn btn--filled btn--block">Отправить</button>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#top" class="logo logo--light" aria-label="Velvet touch">
+        <svg class="logo__icon"><use href="#logo-sprig"/></svg>
+        <span class="logo__text">Velvet touch</span>
+      </a>
+      <nav class="footer__nav" aria-label="Меню в подвале">
+        <a href="#about">Описание вакансии</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2026 Velvet touch. Все права защищены.</p>
+      <p class="footer__demo">Демо-проект для портфолио. Компания и отзывы вымышлены.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
