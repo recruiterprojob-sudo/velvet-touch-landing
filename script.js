@@ -74,33 +74,3 @@ document.getElementById("next").addEventListener("click", () => goTo(active + 1)
 window.addEventListener("load", () => goTo(1));
 setActive(1);
 
-// File label
-const file = document.getElementById("file");
-const fileLabel = document.getElementById("fileLabel");
-file.addEventListener("change", () => {
-  fileLabel.textContent = file.files[0] ? file.files[0].name : "Прикрепить резюме или сертификат";
-});
-
-// Form (demo: validates and shows a message, no backend)
-const form = document.getElementById("form");
-const status = document.getElementById("formStatus");
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  let ok = true;
-  form.querySelectorAll("input[required], input[pattern], input[min]").forEach((input) => {
-    const valid = input.checkValidity();
-    input.classList.toggle("is-invalid", !valid);
-    if (!valid) ok = false;
-  });
-  status.className = "form__status";
-  if (!ok) {
-    status.textContent = "Проверьте поля, отмеченные красным (возраст — от 18 лет).";
-    status.classList.add("is-error");
-    return;
-  }
-  status.textContent = "Спасибо! Заявка отправлена — мы свяжемся с вами в Telegram.";
-  status.classList.add("is-ok");
-  form.reset();
-  fileLabel.textContent = "Прикрепить резюме или сертификат";
-});
-form.addEventListener("input", (e) => e.target.classList.remove("is-invalid"));
