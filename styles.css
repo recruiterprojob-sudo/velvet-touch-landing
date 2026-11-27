@@ -186,14 +186,8 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
 .gallery {
   display: grid; gap: 20px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 230px);
-  grid-template-areas:
-    "a b c"
-    "a d c"
-    "e d f";
 }
-.g1 { grid-area: a; } .g2 { grid-area: b; } .g3 { grid-area: c; }
-.g4 { grid-area: d; } .g5 { grid-area: e; } .g6 { grid-area: f; }
+.gallery .photo { aspect-ratio: 4 / 3; }
 
 /* Reviews */
 .reviews { background: var(--surface); overflow: hidden; }
@@ -300,8 +294,6 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
   .card { padding: 28px 24px; }
   .gallery {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 170px);
-    grid-template-areas: "a b" "a c" "d e" "d f";
     gap: 12px;
   }
   .slider__track { --card-w: 82vw; gap: 14px; }
@@ -314,3 +306,4 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
   html, .slider__track { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
+
